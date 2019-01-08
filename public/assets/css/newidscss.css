@@ -383,28 +383,56 @@ a:focus{
 	/* padding: 0px 0px 69px 0px; */
 	padding: 263px 129px 69px 0px;
 }
-.qoute-list{
+.qoute-list, .mini-slider-list{
 	list-style: none;
 	height: -webkit-fill-available;
 	display: flex;
 	margin: 0;
 	padding: 0px;
-	overflow: auto;
-	overflow-y: hidden;
+	overflow: hidden;
 	width: calc(100% * 2);
+	padding-inline-start: 0!important;
 	-webkit-transition: 0.2s left;
 	-moz-transition: 0.2s left;
 	-ms-transition: 0.2s left;
 	-o-transition: 0.2s left;
 	position: relative;
 }
-.qoute-content{
+.mini-slider-list{
+	/* padding: 10px; */
+}
+.qoute-content, .mini-slider-item{
 	display: flex;
 	justify-content: space-between;
 	height: -webkit-fill-available;
 	width: 100%;
 	list-style-type: none;
 	float: left;
+}
+.mini-slider{
+	width: 516px;
+	height: 387px;
+	border-radius: 20px;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mini-slider-content{
+	background: #c4c4c4;
+	width: 516px;
+	overflow: hidden;
+    height: inherit;
+    position: absolute;
+    z-index: -1;
+    border-radius: 20px;
+}
+.mini-slide-button{
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.mini-slider-item img{
+	width: inherit;
+	height: inherit;
 }
 .qoute-image{
     left: 0;
@@ -418,6 +446,7 @@ a:focus{
 .qoute-nama{
 	padding: 21px 0px 13px 0px;
 }
+
 .momenterbaik{
 	display: flex;
 	flex-direction: column;

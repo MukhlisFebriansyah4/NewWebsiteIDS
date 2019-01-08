@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<link rel="stylesheet" type="text/css" href="../../../public/assets/css/newidscss.css">
 	<title>Tentang Kami</title>
+	<script src="../../../public/assets/js/jquery.min.js"></script>
 </head>
+
 <body>
 	<div class="Header">
 		<div class="Logo-IDS">
@@ -30,29 +33,76 @@
 	</div>
 	<!--  -->
 	<div class="Benner">
-		
+		<div class="mini-slider">
+			<div class="mini-slide-button" id="slide_back"><i class="icon-kejar">left</i></div>
+			<div class="mini-slider-content">
+				<ul class="mini-slider-list">
+					<li class="mini-slider-item">
+						<img src="../../../public/assets/img/1.jpg">
+					</li>
+					<li class="mini-slider-item">
+						<img src="../../../public/assets/img/2.jpg">
+					</li>
+					<li class="mini-slider-item">
+						<img src="../../../public/assets/img/3.jpg">
+					</li>
+					<li class="mini-slider-item">
+						<img src="../../../public/assets/img/4.jpg">
+					</li>
+				</ul>
+			</div>
+			<div class="mini-slide-button" id="slide_fore"><i class="icon-kejar">right</i></div>
+			<input type="hidden" id="slide_num" value="0">
+			<script>
+				var coun = $('.mini-slider-list li').length;
+				$('#slide_back').click(function () {
+					$('#slide_num').val(parseInt($('#slide_num').val()) - 1);
+					slide_change($('#slide_num').val());
+				});
+				$('#slide_fore').click(function () {
+					$('#slide_num').val(parseInt($('#slide_num').val()) + 1);
+					slide_change($('#slide_num').val());
+				});
+				function slide_change(nomor) {
+					if (nomor < 0) {
+						nomor = 0;
+					} else if (nomor > coun - 1) {
+						nomor = coun - 1;
+					}
+					$('ul.mini-slider-list').css('left', "-" + nomor + "00%");
+					$('#slide_num').val(nomor);
+				}
+				$(document).ready(function () {
+					$('.mini-slider-list').css("width", coun + "00%");
+				});
+			</script>
+		</div>
 	</div>
 	<!--  -->
 	<div class="content1" style="">
 		<div style="display: flex;padding: 0px 0px 50px 0px;">
 			<div class="content1-text">
 				<span>IDS Rumah Pendidikan Indonesia merupakan unit usaha yang bergerak di bidang pendidikan dan teknologi.
-				Bermula tahun 2011, IDS Rumah Pendidikan Indonesia berdiri sebagai perusahaan penyedia teknologi dan konsultan pendidikan dengan tujuan menjadikan sistem belajar mengajar serta pengelolaan sekolah di Indonesia lebih bermutu, efektif, dan efisien.
+					Bermula tahun 2011, IDS Rumah Pendidikan Indonesia berdiri sebagai perusahaan penyedia teknologi dan konsultan
+					pendidikan dengan tujuan menjadikan sistem belajar mengajar serta pengelolaan sekolah di Indonesia lebih bermutu,
+					efektif, dan efisien.
 				</span>
 			</div>
 			<div class="content1-img">
-				
+
 			</div>
 		</div>
 		<div style="display: flex;padding: 0px 0px 50px 0px;">
-			<div class="content1-img" >
-				
+			<div class="content1-img">
+
 			</div>
 			<div class="content1-text" style="width: 575px;height: 291px;padding:0px 0px 0px 44px;">
 				<span>IDS Rumah Pendidikan Indonesia merupakan unit usaha yang bergerak di bidang pendidikan dan teknologi.
-				Bermula tahun 2011, IDS Rumah Pendidikan Indonesia berdiri sebagai perusahaan penyedia teknologi dan konsultan pendidikan dengan tujuan menjadikan sistem belajar mengajar serta pengelolaan sekolah di Indonesia lebih bermutu, efektif, dan efisien.
+					Bermula tahun 2011, IDS Rumah Pendidikan Indonesia berdiri sebagai perusahaan penyedia teknologi dan konsultan
+					pendidikan dengan tujuan menjadikan sistem belajar mengajar serta pengelolaan sekolah di Indonesia lebih bermutu,
+					efektif, dan efisien.
 				</span>
-			</div>			
+			</div>
 		</div>
 	</div>
 	<!--  -->
@@ -66,13 +116,15 @@
 		<span class="text-center font-36 lato-bold">Misi Kami</span>
 		<div style="display: flex;padding: 28px 0px 50px 0px;">
 			<div class="content1-img" style="width: 387px;height: 291px;background-color: #C4C4C4;border-radius: 20px;">
-				
+
 			</div>
 			<div class="content1-text" style="width: 575px;height: 291px;padding:0px 0px 0px 44px;">
 				<span>IDS Rumah Pendidikan Indonesia merupakan unit usaha yang bergerak di bidang pendidikan dan teknologi.
-				Bermula tahun 2011, IDS Rumah Pendidikan Indonesia berdiri sebagai perusahaan penyedia teknologi dan konsultan pendidikan dengan tujuan menjadikan sistem belajar mengajar serta pengelolaan sekolah di Indonesia lebih bermutu, efektif, dan efisien.
+					Bermula tahun 2011, IDS Rumah Pendidikan Indonesia berdiri sebagai perusahaan penyedia teknologi dan konsultan
+					pendidikan dengan tujuan menjadikan sistem belajar mengajar serta pengelolaan sekolah di Indonesia lebih bermutu,
+					efektif, dan efisien.
 				</span>
-			</div>			
+			</div>
 		</div>
 	</div>
 	<!--  -->
@@ -81,18 +133,18 @@
 			<div class="content1-quote-text font-36 color-white">
 				<span>“Tiada hari tanpa kebermanfaatan.” </span>
 			</div>
-			<div class="content1-quote-nama color-white font-24" style="align-self: flex-end;padding: 68px 0px 5px 0px;" >
+			<div class="content1-quote-nama color-white font-24" style="align-self: flex-end;padding: 68px 0px 5px 0px;">
 				<span>Mutia Prawitasari, S.E</span>
 			</div>
 			<div class="line-white bg-white" style="width: 229px;height: 1px;align-self: flex-end;">
-				
+
 			</div>
 			<div class="content1-quote-jabatan color-white font-18" style="align-self: flex-end;padding: 5px 0px 0px 0px;">
 				<span>Direktur Utama CV IDS</span>
 			</div>
 		</div>
 		<div class="content1-quote-img" style="width: 291px;height: 325px;background-color: #C4C4C4;margin-top: -86px;">
-			
+
 		</div>
 	</div>
 	<!--  -->
@@ -133,24 +185,24 @@
 	</div>
 	<!--  -->
 	<div class="btn-accordion">
-		<button class="accordion bg-navy color-white">		
+		<button class="accordion bg-navy color-white">
 			<div class="text-accordion font-24">
 				<span>TIM MARKETING DAN PELAYANAN</span>
-			</div>		
+			</div>
 		</button>
 	</div>
 
-	<div class="panel" style="display: flex;flex-direction: column;">  
+	<div class="panel" style="display: flex;flex-direction: column;">
 		<div style="display: flex;padding: 0px 0px 28px 0px;align-items: baseline;">
 			<div style="display: flex;flex-direction: column;">
 				<div class="panel-img">
 					<img style="width:265px;height: 250px;border-radius: 20px;" src="../../../public/assets/img/TeamIDS/Mbak-Ute.png">
-				</div>				
-				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
-					<span>Sutera Pramitaratri, S.TP</span>					
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
+					<span>Sutera Pramitaratri, S.TP</span>
+				</div>
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Public Relation
@@ -158,13 +210,13 @@
 			</div>
 			<div style="display: flex;flex-direction: column;padding: 0px 88px 0px 88px;">
 				<div class="panel-img">
-				
+
 				</div>
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Anis Arifin, S.Hi</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					General Marketing
@@ -172,13 +224,13 @@
 			</div>
 			<div style="display: flex;flex-direction: column;">
 				<div class="panel-img">
-					
+
 				</div>
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Fatchur Rahman Mustar, S.E</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Marketing
@@ -193,8 +245,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Aninda Ramadhani</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Customer Service
@@ -207,8 +259,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Liri Mauli Pratiwi</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Client Administration
@@ -216,13 +268,13 @@
 			</div>
 			<div style="display: flex;flex-direction: column;">
 				<div class="panel-img bg-new" style="width:265px;height: 250px;border-radius: 20px;">
-					
+
 				</div>
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Kejora</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Customer Support
@@ -232,14 +284,14 @@
 	</div>
 	<!--  -->
 	<div class="btn-accordion">
-		<button class="accordion bg-navy color-white">		
+		<button class="accordion bg-navy color-white">
 			<div class="text-accordion font-24">
 				<span>TIM ADMINISTRASI</span>
-			</div>		
+			</div>
 		</button>
 	</div>
 
-	<div class="panel" style="display: flex;flex-direction: column;">  
+	<div class="panel" style="display: flex;flex-direction: column;">
 		<div style="display: flex;padding: 0px 0px 28px 0px;">
 			<div style="display: flex;flex-direction: column;">
 				<div class="panel-img">
@@ -248,8 +300,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Resti Ayu Purnama, S.Ak</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Treasurer
@@ -262,8 +314,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Dini Hanifa, S.T</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Employee Administration
@@ -276,8 +328,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Ayu Nurul Akhsanah</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Customer Support
@@ -287,24 +339,24 @@
 	</div>
 	<!--  -->
 	<div class="btn-accordion">
-		<button class="accordion bg-navy color-white">		
+		<button class="accordion bg-navy color-white">
 			<div class="text-accordion font-24">
 				<span>TIM KURIKULUM</span>
-			</div>		
+			</div>
 		</button>
 	</div>
 
-	<div class="panel" style="display: flex;flex-direction: column;">  
+	<div class="panel" style="display: flex;flex-direction: column;">
 		<div style="display: flex;padding: 0px 0px 28px 0px;">
 			<div style="display: flex;flex-direction: column;">
 				<div class="panel-img " style="width:265px;height: 250px;border-radius: 20px;">
-					
+
 				</div>
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Pera Tinfika Mutiara, S.Si</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Curriculum
@@ -312,13 +364,13 @@
 			</div>
 			<div style="display: flex;flex-direction: column;padding: 0px 88px 0px 88px;">
 				<div class="panel-img " style="width:265px;height: 250px;border-radius: 20px;">
-					<img style="width:265px;height: 250px;border-radius: 20px;" src="../../../public/assets/img/TeamIDS/Rea.png">	
+					<img style="width:265px;height: 250px;border-radius: 20px;" src="../../../public/assets/img/TeamIDS/Rea.png">
 				</div>
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Chadijah Andreati Poetri</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Curriculum
@@ -331,8 +383,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Sande Listiana</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Curriculum
@@ -342,24 +394,24 @@
 	</div>
 	<!--  -->
 	<div class="btn-accordion">
-		<button class="accordion bg-navy color-white">		
+		<button class="accordion bg-navy color-white">
 			<div class="text-accordion font-24">
 				<span>TIM KREATIF</span>
-			</div>		
+			</div>
 		</button>
 	</div>
 
-	<div class="panel" style="display: flex;flex-direction: column;">  
+	<div class="panel" style="display: flex;flex-direction: column;">
 		<div style="display: flex;padding: 0px 0px 28px 0px;">
 			<div style="display: flex;flex-direction: column;">
 				<div class="panel-img bg-new" style="width:265px;height: 250px;border-radius: 20px;">
-					
+
 				</div>
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Rizky Fazriansyah</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Senior Designer
@@ -372,8 +424,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Siti Yuliana Sari</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Multimedia Officer
@@ -386,8 +438,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Ika Fitria Nur Ayuningrum</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Spoke person
@@ -397,14 +449,14 @@
 	</div>
 	<!--  -->
 	<div class="btn-accordion">
-		<button class="accordion bg-navy color-white">		
+		<button class="accordion bg-navy color-white">
 			<div class="text-accordion font-24">
 				<span>TIM PRODUKSI</span>
-			</div>		
+			</div>
 		</button>
 	</div>
 
-	<div class="panel" style="display: flex;flex-direction: column;">  
+	<div class="panel" style="display: flex;flex-direction: column;">
 		<div style="display: flex;padding: 0px 0px 28px 0px;">
 			<div style="display: flex;flex-direction: column;">
 				<div class="panel-img bg-new" style="width:265px;height: 250px;border-radius: 20px;">
@@ -413,8 +465,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Rifqi Irianto</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Senior Designer
@@ -427,8 +479,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Agung Prasetyo</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Senior Designer
@@ -441,8 +493,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Syukron Muttaqien</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Senior Designer
@@ -457,8 +509,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Alwi Aulia Nuryadin, MTA</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Senior Designer
@@ -466,13 +518,13 @@
 			</div>
 			<div style="display: flex;flex-direction: column;padding: 0px 88px 0px 88px;">
 				<div class="panel-img bg-new" style="width:265px;height: 250px;border-radius: 20px;">
-					
+
 				</div>
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Muhamad Aziz, MTA</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Senior Designer
@@ -485,8 +537,8 @@
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Muhamad Yusril Saputra, MTA</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Senior Designer
@@ -495,52 +547,53 @@
 		</div>
 		<div style="display: flex;padding: 0px 0px 28px 0px;">
 			<div style="display: flex;flex-direction: column;">
-				<div class="panel-img" >
+				<div class="panel-img">
 					<img style="width:265px;height: 250px;border-radius: 20px;" src="../../../public/assets/img/TeamIDS/mukhlis.png">
 				</div>
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Mukhlis Febriansyah, MTA</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					Senior Designer
 				</div>
 			</div>
 			<div style="display: flex;flex-direction: column;padding: 0px 88px 0px 88px;">
-				<div class="panel-img" >
+				<div class="panel-img">
 					<img style="width:265px;height: 250px;border-radius: 20px;" src="../../../public/assets/img/TeamIDS/zai2.jpg">
 				</div>
 				<div class="panel-nama font-24 lato-bold text-center" style="padding: 0px 0px 5px 0px;height: 54px;    width: 270px;">
 					<span>Muhammad Zainur Rahman Juliansyah</span>
 				</div>
-				<div class="line-tosca2 bg-new1" >
-					
+				<div class="line-tosca2 bg-new1">
+
 				</div>
 				<div class="panel-jabatan text-center font-18 lato-semibold" style="padding: 6px 0px 0px 0px;">
 					SysAdmin - DevOps
 				</div>
-			</div>						
+			</div>
 		</div>
 	</div>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
-var acc = document.getElementsByClassName("accordion");
-var i;
+	var acc = document.getElementsByClassName("accordion");
+	var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = '1000' + "px";
-    } 
-  });
-}
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function () {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+			} else {
+				panel.style.maxHeight = '1000' + "px";
+			}
+		});
+	}
 </script>
+
 </html>
