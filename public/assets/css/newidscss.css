@@ -409,22 +409,21 @@ a:focus{
 	list-style-type: none;
 	float: left;
 }
-.mini-slider{
+.mini-slider, .mini-slider-content{
 	width: 516px;
 	height: 387px;
 	border-radius: 20px;
+}
+.mini-slider{
 	display: flex;
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 .mini-slider-content{
 	background: #c4c4c4;
-	width: 516px;
 	overflow: hidden;
-    height: inherit;
-    position: absolute;
-    z-index: -1;
-    border-radius: 20px;
+  position: absolute;
+  z-index: -1;
 }
 .mini-slide-button{
 	color: #FFFFFF;
