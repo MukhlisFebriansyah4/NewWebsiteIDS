@@ -4,6 +4,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="../../../public/assets/css/newidscss.css">
 	<title>Beranda</title>
+	<script src="../../../public/assets/js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
 	</div>
 	<!--  -->
 	<div class="Benner">
-
+		<img style="width: 1358px;" src="../../../public/assets/img/BannerIDS/BannerWebIDS1.jpg">
 	</div>
 	<!--  -->
 	<div class="Tentang-IDS">
@@ -206,24 +207,166 @@
 	<img style="padding: 24px 0px 0px 24px;" src="../../../public/assets/img/petaidn.png">
 	<!--  -->
 	<div class="qoute-IDS color-white">
-		<img class="qoute-image">
-		<div style="display: flex;flex-direction: column;">
-			<div class="qoute-text font-24 lato-regular">
-				<span>“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-					industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-					it to make a type specimen book.”</span>
-			</div>
-			<div class="line-tosca bg-tosca">
-
-			</div>
-			<div class="qoute-nama font-24 lato-bold">
-				<span>Mukhlis Febriansyah</span>
-			</div>
-			<div class="qoute-jabatan font-24 lato-regular">
-				<span>Senior Designer</span>
-			</div>
-		</div>
+		<input type="hidden" value="0" id="slide_num">
+		<div class="slide-button" id="slide_back" style="display: none"><i class="icon-kejar">left</i></div>
+		<div class="slide-button" id="slide_fore" style="right: 0px;"><i class="icon-kejar">right</i></div>
+		<ul class="qoute-list">
+			<li class="qoute-content">
+				<img class="qoute-image" src="../../../public/assets/img/TeamIDS/mukhlis.png">
+				<div style="display: flex;flex-direction: column;">
+					<div class="qoute-text font-24 lato-regular">
+						<span>“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+							scrambled
+							it to make a type specimen book.”</span>
+					</div>
+					<div class="line-tosca bg-tosca"></div>
+					<div class="qoute-nama font-24 lato-bold">
+						<span>Mukhlis Febriansyah</span>
+					</div>
+					<div class="qoute-jabatan font-24 lato-regular">
+						<span>Senior Designer</span>
+					</div>
+				</div>
+			</li>
+			<li class="qoute-content">
+				<img class="qoute-image" src="../../../public/assets/img/TeamIDS/yusril.png">
+				<div style="display: flex;flex-direction: column;">
+					<div class="qoute-text font-24 lato-regular">
+						<span>“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+							scrambled
+							it to make a type specimen book.”</span>
+					</div>
+					<div class="line-tosca bg-tosca"></div>
+					<div class="qoute-nama font-24 lato-bold">
+						<span>Muhamad Yusril Saputra</span>
+					</div>
+					<div class="qoute-jabatan font-24 lato-regular">
+						<span>Senior Designer</span>
+					</div>
+				</div>
+			</li>
+			<li class="qoute-content">
+				<img class="qoute-image" src="../../../public/assets/img/TeamIDS/Alwi.png">
+				<div style="display: flex;flex-direction: column;">
+					<div class="qoute-text font-24 lato-regular">
+						<span>“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+							scrambled
+							it to make a type specimen book.”</span>
+					</div>
+					<div class="line-tosca bg-tosca"></div>
+					<div class="qoute-nama font-24 lato-bold">
+						<span>Alwi Aulia Nuryadin</span>
+					</div>
+					<div class="qoute-jabatan font-24 lato-regular">
+						<span>Senior Designer</span>
+					</div>
+				</div>
+			</li>
+			<li class="qoute-content">
+				<img class="qoute-image" src="../../../public/assets/img/TeamIDS/Rifqi.png">
+				<div style="display: flex;flex-direction: column;">
+					<div class="qoute-text font-24 lato-regular">
+						<span>“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+							scrambled
+							it to make a type specimen book.”</span>
+					</div>
+					<div class="line-tosca bg-tosca"></div>
+					<div class="qoute-nama font-24 lato-bold">
+						<span>Rifqi Irianto</span>
+					</div>
+					<div class="qoute-jabatan font-24 lato-regular">
+						<span>Senior Developer</span>
+					</div>
+				</div>
+			</li>
+			<li class="qoute-content">
+				<img class="qoute-image" src="../../../public/assets/img/TeamIDS/Agung.png">
+				<div style="display: flex;flex-direction: column;">
+					<div class="qoute-text font-24 lato-regular">
+						<span>“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+							scrambled
+							it to make a type specimen book.”</span>
+					</div>
+					<div class="line-tosca bg-tosca"></div>
+					<div class="qoute-nama font-24 lato-bold">
+						<span>Agung Prasetyo</span>
+					</div>
+					<div class="qoute-jabatan font-24 lato-regular">
+						<span>Senior Developer</span>
+					</div>
+				</div>
+			</li>
+			<li class="qoute-content">
+				<img class="qoute-image" src="../../../public/assets/img/TeamIDS/Syukron.png">
+				<div style="display: flex;flex-direction: column;">
+					<div class="qoute-text font-24 lato-regular">
+						<span>“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+							scrambled
+							it to make a type specimen book.”</span>
+					</div>
+					<div class="line-tosca bg-tosca"></div>
+					<div class="qoute-nama font-24 lato-bold">
+						<span>Syukron Muttaqien</span>
+					</div>
+					<div class="qoute-jabatan font-24 lato-regular">
+						<span>Mobile Developer</span>
+					</div>
+				</div>
+			</li>
+			<li class="qoute-content">
+				<img class="qoute-image" src="../../../public/assets/img/TeamIDS/zai2.jpg">
+				<div style="display: flex;flex-direction: column;">
+					<div class="qoute-text font-24 lato-regular">
+						<span>“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+							scrambled
+							it to make a type specimen book.”</span>
+					</div>
+					<div class="line-tosca bg-tosca"></div>
+					<div class="qoute-nama font-24 lato-bold">
+						<span>Muhammad Zainur Rahman Juliansyah</span>
+					</div>
+					<div class="qoute-jabatan font-24 lato-regular">
+						<span>System Admin</span>
+					</div>
+				</div>
+			</li>
+		</ul>
 	</div>
+	<script>
+		var coun = $('.qoute-list li').length;
+		$('#slide_back').click(function () {
+			$('#slide_num').val(parseInt($('#slide_num').val()) - 1);
+			slide_change($('#slide_num').val());
+		});
+		$('#slide_fore').click(function () {
+			$('#slide_num').val(parseInt($('#slide_num').val()) + 1);
+			slide_change($('#slide_num').val());
+		});
+		function slide_change(nomor) {
+			$('ul.qoute-list').css('left', "-" + nomor + "00%");
+			if (nomor == 0) {
+				$('#slide_back').css('display', 'none');
+			} else if (nomor == coun - 1) {
+				$('#slide_fore').css('display', 'none');
+			} else {
+				$('#slide_back').css('display', 'block');
+				$('#slide_fore').css('display', 'block');
+			}
+		}
+		$('#slide_num').change(function () {
+
+		});
+		$(document).ready(function () {
+			$('.qoute-list').css("width", coun + "00%");
+		});
+	</script>
 	<!--  -->
 	<div class="momenterbaik">
 		<span class="font-24 lato-regular">MOMEN-MOMEN TERBAIK</span>
