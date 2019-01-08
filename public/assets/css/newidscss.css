@@ -375,7 +375,7 @@ a:focus{
 		cursor: pointer;
 		position: absolute;
 		margin-top: 251px;
-		z-index: 1000;
+		z-index: 998;
 }
 .qoute-text{
 	width: 474px;
