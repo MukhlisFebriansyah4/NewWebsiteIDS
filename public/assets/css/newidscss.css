@@ -2,10 +2,40 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
 @font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+  font-family: 'kejar';
+  src:  url('../../font/kejar_icon/kejar.eot?tzwaxa');
+  src:  url('../../font/kejar_icon/kejar.eot?tzwaxa#iefix') format('embedded-opentype'),
+    url('../../font/kejar_icon/kejar.ttf?tzwaxa') format('truetype'),
+    url('../../font/kejar_icon/kejar.woff?tzwaxa') format('woff'),
+    url('../../font/kejar_icon/kejar.svg?tzwaxa#kejar') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-kejar"], [class*=" icon-kejar"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'kejar' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+	line-height: 1;
+
+	/* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+	font-feature-settings: "liga";
+	vertical-align: middle;
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body{
 	margin:0px;
@@ -333,16 +363,83 @@ a:focus{
 	padding: 0px 48px 0px 0px;
 }
 .qoute-IDS{
-	height: 450px;
-	background-color: #4A4A4A;
-	display: flex;
-	justify-content: flex-end;
-	padding:260px 128px 260px 0px;
+	height: 702px;
+	background-color: transparent;
+	background-image: linear-gradient(to right, transparent, #4a4a4a);
+	overflow: hidden;
+}
+.slide-button{
+	background: rgba(125,125,125,0.4);
+    width: 100px;
+    height: 100px;
+    font-size: 66px;
+    text-align: center;
+		border-radius: 100%;
+		cursor: pointer;
+		position: absolute;
+		margin-top: 251px;
+		z-index: 998;
 }
 .qoute-text{
 	width: 474px;
 	height: 169px;
-	padding: 0px 0px 69px 0px;
+	/* padding: 0px 0px 69px 0px; */
+	padding: 263px 129px 69px 0px;
+}
+.qoute-list, .mini-slider-list{
+	list-style: none;
+	height: -webkit-fill-available;
+	display: flex;
+	margin: 0;
+	padding: 0px;
+	overflow: hidden;
+	width: calc(100% * 2);
+	padding-inline-start: 0!important;
+	-webkit-transition: 0.2s left;
+	-moz-transition: 0.2s left;
+	-ms-transition: 0.2s left;
+	-o-transition: 0.2s left;
+	position: relative;
+}
+.mini-slider-list{
+	/* padding: 10px; */
+}
+.qoute-content, .mini-slider-item{
+	display: flex;
+	justify-content: space-between;
+	height: -webkit-fill-available;
+	width: 100%;
+	list-style-type: none;
+	float: left;
+}
+.mini-slider, .mini-slider-content{
+	width: 516px;
+	height: 387px;
+	border-radius: 20px;
+}
+.mini-slider{
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mini-slider-content{
+	background: #c4c4c4;
+	overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.mini-slide-button{
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.mini-slider-item img{
+	width: inherit;
+	height: inherit;
+}
+.qoute-image{
+    left: 0;
+		z-index: -1;
+		height: -webkit-fill-available;
 }
 .line-tosca{
 	height: 2px;
@@ -351,6 +448,7 @@ a:focus{
 .qoute-nama{
 	padding: 21px 0px 13px 0px;
 }
+
 .momenterbaik{
 	display: flex;
 	flex-direction: column;
