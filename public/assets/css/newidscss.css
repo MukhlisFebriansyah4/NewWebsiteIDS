@@ -238,6 +238,9 @@ a:focus{
 .Item-header{
 	padding: 29px 0px 30px 56px;
 }
+.nama-userheader{
+	padding: 20px 15px 20px 0px;
+}
 
 .Logo-IDS{
 	padding: 13px 63px 13px 48px;
@@ -455,11 +458,13 @@ a:focus{
 	height: auto;
 	display: flex;
 	flex-direction: column;
+	text-align: justify;
 	padding: 64px 180px 0px 180px;
 }
 .content1-text{
 	width: 575px;
 	height: 291px;
+	font-size: 24px;
 	padding:0px 44px 0px 0px;
 }
 .content1-img{
@@ -508,4 +513,45 @@ a:focus{
   border-bottom-right-radius: 20px;
   transition: max-height 0.3s ease-out;
   border:1px solid #C4C4C4;
+}
+
+.box15{position:relative}
+.box15 img{width:100%;height:auto}
+.box15 .box-content{width:265px;height:100%;position:absolute;top:0;left:0;transition:all .5s ease 0s;text-align: center;border-radius: 20px;}
+.box15:hover .box-content{background-color:rgba(255,242,242,.8)}
+.box15 .box-content:after,.box15 .box-content:before{content:"";width:50px;height:50px;position:absolute;opacity:0;transform:scale(1.5);transition:all .6s ease .3s}
+.box15 .box-content:before{border-left:1px solid #040404;border-top:1px solid #040404;top:19px;left:19px}
+.box15 .box-content:after{border-bottom:1px solid #040404;border-right:1px solid #040404;bottom:19px;right:19px}
+.box15:hover .box-content:after,.box15:hover .box-content:before{opacity:1;transform:scale(1)}
+.box15 .title{font-size:22px;color:#000;margin:0;position:relative;top:0;opacity:0;transition:all 1s ease 10ms}
+.box15:hover .title{top:39%;opacity:1;transition:all .5s cubic-bezier(1,-.53,.405,1.425) 10ms}
+.box15 .title:after{content:"";width:0;height:1px;background:#040404;position:absolute;bottom:-8px;left:0;right:0;margin:0 auto;transition:all 1s ease 0s}
+.box15:hover .title:after{width:80%;transition:all 1s ease .8s}
+.box15 .icon{width:100%;margin:0 auto;position:absolute;bottom:0;opacity:0;transition-duration:.6s;transition-timing-function:cubic-bezier(1,-.53,.405,1.425);transition-delay:.1s}
+.box15:hover .icon{bottom:39%;opacity:1}
+.box15 .icon li{display:inline-block}
+.box15 .icon li a{display:block;width:40px;height:40px;line-height:40px;border-radius:50%;font-size:18px;color:#000;border:1px solid #000;margin-right:5px;transition:all .3s ease-in-out 0s}
+.box15 .icon li a:hover{background:#000;color:#fff}
+@media only screen and (max-width:990px){.box15{margin-bottom:30px}
+}
+
+.box6{background:#000;position:relative}
+.box6:after{background:rgba(0,0,0,.7);position:absolute;top:0;left:-30%;bottom:0;right:70%;transform:skew(20deg) translateX(-75%)}
+.box6:hover:after{transform:skew(20deg) translateX(0)}
+.box6 img{width:100%;height:auto}
+.box6:hover img{opacity:.5}
+.box6 .box-content{padding:20px;text-align:right;position:absolute;top:0;right:0;z-index:1}
+.box6 .icon,.box7 .icon{padding:0;list-style:none}
+.box10 .icon li a,.box11,.box12,.box13,.box14,.box6 .icon li a,.box7,.box7 .icon li a,.box8,.box8 .icon li a{text-align:center}
+.box6 .title{font-size:20px;font-weight:900;color:#fff;margin:0 0 10px;transform:scale(0)}
+.box6:hover .title{transform:scale(1)}
+.box6 .icon li,.box6 .post{opacity:0;transform:translateX(40px);transition:all .35s ease 0s}
+.box6 .post{display:block;font-size:14px;color:#fff;margin-bottom:5px}
+.box6 .icon{display:inline-block;margin:0}
+.box6:hover .icon li,.box6:hover .post{opacity:1;transform:translateX(0)}
+.box6:hover .icon li:first-child{transition-delay:.1s}
+.box6:hover .icon li:nth-child(2){transition-delay:.2s}
+.box6 .icon li a{display:block;width:35px;height:35px;line-height:35px;background:#fff;font-size:18px;color:#605f5f;margin-bottom:5px;transition:all .35s ease}
+.box6 .icon li a:hover{background:#605f5f;color:#fff}
+@media only screen and (max-width:990px){.box6{margin-bottom:30px}
 }

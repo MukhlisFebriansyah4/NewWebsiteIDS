@@ -1,9 +1,144 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<link rel="stylesheet" type="text/css" href="../../../public/assets/css/newidscss.css">
 	<title>IDS Buku Tahunan</title>
 </head>
+<style>
+	body {
+		font-family: Arial;
+	}
+
+	/* Style the tab */
+	.tab {
+		overflow: hidden;
+		border-bottom: 2px solid #3CB5B5;
+		;
+	}
+
+	/* Style the buttons inside the tab */
+	.tab button {
+		color: black;
+		background-color: #ffffff;
+		float: left;
+		border: none;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		outline: none;
+		cursor: pointer;
+		padding: 14px 16px;
+		transition: 0.3s;
+		font-size: 24px;
+	}
+
+	/* Change background color of buttons on hover */
+	.tab button:hover {
+		background-color: #C5EBEB;
+	}
+
+	/* Create an active/current tablink class */
+	.tab button.active {
+		color: #ffffff;
+		background-color: #3CB5B5;
+	}
+
+	/* Style the tab content */
+	.tabcontent {
+		display: block;
+		padding: 6px 12px;
+		/* border: 1px solid #ccc; */
+		border-top: none;
+	}
+
+	/*  */
+	.slideshow-container {
+		max-width: 1110px;
+		position: relative;
+		/* margin: auto; */
+	}
+
+	/* Caption text */
+	.text {
+		color: #f2f2f2;
+		font-size: 15px;
+		padding: 8px 12px;
+		position: absolute;
+		bottom: 8px;
+		width: 100%;
+		text-align: center;
+	}
+
+	/* Number text (1/3 etc) */
+	.numbertext {
+		color: #f2f2f2;
+		font-size: 12px;
+		padding: 8px 12px;
+		position: absolute;
+		top: 0;
+	}
+
+	/* The dots/bullets/indicators */
+	.dot {
+		height: 15px;
+		width: 15px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+
+	.active {
+		background-color: #717171;
+	}
+
+	/* Fading animation */
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+
+	@-webkit-keyframes fade {
+		from {
+			opacity: .4
+		}
+
+		to {
+			opacity: 1
+		}
+	}
+
+	@keyframes fade {
+		from {
+			opacity: .4
+		}
+
+		to {
+			opacity: 1
+		}
+	}
+
+	/* On smaller screens, decrease text size */
+	@media only screen and (max-width: 300px) {
+		.text {
+			font-size: 11px
+		}
+	}
+
+	/*  */
+	.bg-img {
+		background-image: url("kin.png");
+		background-repeat: no-repeat;
+		background-size: auto;
+		margin-top: -110px;
+		height: auto;
+		padding: 165px 68px 0px 148px;
+	}
+</style>
+
 <body>
 	<div class="Header">
 		<div class="Logo-IDS">
@@ -30,8 +165,298 @@
 	</div>
 	<!--  -->
 	<div class="Benner">
-		
+		<img style="width: 1358px;" src="../../../public/assets/img/BannerIDS/Baner IDS Production.jpg" />
 	</div>
+	<!--  -->
+	<div style="padding: 49px 128px;">
+		<div class="tab">
+			<button class="tablinks active" onclick="openCity(event, 'IDS Buku Tahunan')">IDS Buku Tahunan</button>
+			<button class="tablinks" onclick="openCity(event, 'IDS Documentation')">IDS Documentation</button>
+		</div>
 
+		<div id="IDS Buku Tahunan" class="tabcontent">
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 3</div>
+					<img src="../../../public/assets/img/BannerIDS/Kel4.jpg" style="width:100%;border-radius: 20px;">
+					<div class="text">Caption Text</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 3</div>
+					<img src="../../../public/assets/img/BannerIDS/Kel5.jpg" style="width:100%;border-radius: 20px;">
+					<div class="text">Caption Two</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">3 / 3</div>
+					<img src="../../../public/assets/img/BannerIDS/Kel6.jpg" style="width:100%;border-radius: 20px;">
+					<div class="text">Caption Three</div>
+				</div>
+			</div>
+			<div style="text-align:justify;font-size: 24px;">
+				<p>Bergerak di bidang industri kreatif, kebutuhan akan dokumentasi salam bentuk digital maupun cetak banyak
+					diminati. Hal ini memberikan kesempatan untuk IDS turut berkarya dalam bidang Fotografi dan Videografi yang
+					dituangkan dan dihasilkan dalam bentuk Buku Tahunan, dokumentasi kegiatan sekolah, dan moment-moment berharga
+					lainnya.</p>
+			</div>
+			<div>
+				<h2>Ingin tahu lebih banyak tentang Buku Tahunan IDS?</h2>
+			</div>
+			<div style="display:flex">
+				<div style="width:300px;height:300px;padding: 0px 28px;">
+					<img src="../../../public/assets/img/BukuTahunan/TK.png" alt="">
+				</div>
+				<div style="width:300px;height:300px;padding: 0px 28px;">
+					<img src="../../../public/assets/img/BukuTahunan/SD.png" alt="">
+				</div>
+				<div style="width:300px;height:300px;padding: 0px 28px;">
+					<img src="../../../public/assets/img/BukuTahunan/SMP.png" alt="">
+				</div>
+			</div>
+			<div style="display:flex;margin-top:40px;">
+				<div style="width:300px;height:300px;padding: 0px 28px;">
+					<img src="../../../public/assets/img/BukuTahunan/SMA.png" alt="">
+				</div>
+				<div style="width:300px;height:300px;padding: 0px 28px;">
+					<img src="../../../public/assets/img/BukuTahunan/SMK 2.png" alt="">
+				</div>
+				<div style="width:300px;height:300px;padding: 0px 28px;">
+					<img src="../../../public/assets/img/BukuTahunan/SMK.png" alt="">
+				</div>
+			</div>
+			<div style="text-align:justify;font-size: 24px;">
+				<p>IDS Production telah berpengalaman dalam pembuatan Buku Tahunan Sekolah dari mulai jenjang TK, SD, SMP, SMA, dan
+					SMK, serta dipercaya oleh banyak sekolah. IDS memiliki portofolio hasil dokumentasi dan desain layout yang
+					memumpuni dan memiliki standar kualitas dalam setiap pembuatan Buku Tahunan.</p>
+			</div>
+			<div style="display:flex;">
+				<div style="width:552px;height:370px;padding: 6px 6px 6px 0px;">
+					<img src="../../../public/assets/img/BukuTahunan/Kel4.png" alt="">
+				</div>
+				<div style="width:552px;height:370px;padding: 6px 6px 6px 0px;">
+					<img src="../../../public/assets/img/BukuTahunan/DSC08343.png" alt="">
+				</div>
+			</div>
+			<div style="display:flex;">
+				<div style="width:552px;height:370px;padding: 6px 6px 6px 0px;">
+					<img src="../../../public/assets/img/BukuTahunan/Kel5.png" alt="">
+				</div>
+				<div style="width:552px;height:370px;padding: 6px 6px 6px 0px;">
+					<img src="../../../public/assets/img/BukuTahunan/Kel 4.png" alt="">
+				</div>
+			</div>
+			<div style="display:flex;">
+				<div style="width:552px;height:370px;padding: 6px 6px 6px 0px;">
+					<img src="../../../public/assets/img/BukuTahunan/6.png" alt="">
+				</div>
+				<div style="width:552px;height:370px;padding: 6px 6px 6px 0px;">
+					<img src="../../../public/assets/img/BukuTahunan/c.png" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div id="IDS Documentation" class="tabcontent">
+			<h3>Paris</h3>
+			<p>Paris is the capital of France.</p>
+		</div>
+	</div>
+	<div style="text-align:center;color:  #33495D;">
+		<h1>Abadikan momen berharga anak bersama <br> teman-teman sekolahnya!</h1>
+	</div>
+	<div class="bg-img">
+		<div style="display: flex;width: 1150px;height:400px;background: rgba(255, 255, 255, 0.6);box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);border-radius: 20px;">
+			<div style="padding: 25px 19px;">
+				<img style="width:360px;height:350px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/12.JPG" alt="">
+			</div>
+			<div style="padding: 25px 0px;">
+				<img style="width:360px;height:350px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/DSC_0038.JPG"
+				 alt="">
+			</div>
+			<div style="padding: 25px 0px 25px 15px;">
+				<img style="width:360px;height:350px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/2018-03-18 08.43.41 2.JPG"
+				 alt="">
+			</div>
+		</div>
+		<div style="display: flex;width: 1150px;height:400px;background: rgba(255, 255, 255, 0.6);box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);border-radius: 20px;margin-top: 30px;">
+			<div style="padding: 25px 19px;">
+				<img style="width:360px;height:350px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/DSC_0196.JPG"
+				 alt="">
+			</div>
+			<div style="padding: 25px 0px;">
+				<img style="width:360px;height:350px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/2018-03-18 08.43.44 2.JPG"
+				 alt="">
+			</div>
+			<div style="padding: 25px 0px 25px 15px;">
+				<img style="width:360px;height:350px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/8.JPG" alt="">
+			</div>
+		</div>
+		<div style="display: flex;width: 1150px;height:400px;background: rgba(255, 255, 255, 0.6);box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);border-radius: 20px;margin-top: 30px;">
+			<div style="padding: 25px 19px;">
+				<img style="width:360px;height:350px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/41.JPG" alt="">
+			</div>
+			<div style="padding: 25px 0px;">
+				<img style="width:360px;height:350px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/35.JPG" alt="">
+			</div>
+			<div style="padding: 25px 0px 25px 15px;">
+				<img style="width:360px;height:350px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/60.JPG" alt="">
+			</div>
+		</div>
+		<div style="text-align:center;color:#33495D;margin-top: 70px;">
+			<h1>Tertarik dengan Buku Tahunan IDS?</h1>
+		</div>
+		<div style="display:flex;">
+			<div style="display:flex;flex-direction: column;align-items: center;">
+				<div>
+					<img style="width:150px;height:150px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/CS.png" alt="">
+				</div>
+				<div style="text-align: center;width: 320px;line-height: 23px;">
+					<p>Hubungi Tim IDS di nomor berikut: <br> +62 812-9004-9147 (Inka) <br> Kenalkan dirimu kepada tim IDS; <br> Nama,
+						asal sekolah dan lokasi sekolah. Sertakan info jumlah siswa 1 angkatan, <br> jumlah kelas, dan jumlah guru/staf
+						<br> di sekolahmu.</p>
+				</div>
+			</div>
+			<div style="display:flex;flex-direction: column;align-items: center;padding: 0px 75px;">
+				<div>
+					<img style="width:150px;height:150px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/Buku.png"
+					 alt="">
+				</div>
+				<div style="text-align: center;width: 320px;line-height: 23px;">
+					<p>Kemudian, Tim IDS akan membuat <br> paket buku tahunan berdasarkan <br> spesifikasi buku dan jumlah pemesanan
+						<br> buku.</p>
+				</div>
+			</div>
+			<div style="display:flex;flex-direction: column;align-items: center;">
+				<div>
+					<img style="width:150px;height:150px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/Presentasi.png"
+					 alt="">
+				</div>
+				<div style="text-align: center;width: 320px;line-height: 23px;">
+					<p>Jika sekolah ingin mengundang tim IDS untuk mempresentasikan paket buku tahunan tersebut, maka tim IDS siap
+						menuju sekolahmu untuk menampilkan karya-karya buku tahunan dari IDS.</p>
+				</div>
+			</div>
+		</div>
+		<div style="display:flex;margin-top: 60px;">
+			<div style="display:flex;flex-direction: column;align-items: center;">
+				<div>
+					<img style="width:150px;height:150px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/MoU.png"
+					 alt="">
+				</div>
+				<div style="text-align: center;width: 320px;line-height: 23px;">
+					<p>Setelah adanya kesepakatan dan penentuan paket, selanjutnya kedua belah pihak menandatangi surat kerjasama atau
+						MoU.
+						*Tugas sekolah membentuk tim panitia buku tahunan (jika belum ada).</p>
+				</div>
+			</div>
+			<div style="display:flex;flex-direction: column;align-items: center;padding: 0px 75px;">
+				<div>
+					<img style="width:150px;height:150px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/Diskusi.png"
+					 alt="">
+				</div>
+				<div style="text-align: center;width: 320px;line-height: 23px;">
+					<p>Setiap kelas menentukan tema dan lokasi pemotretan buku tahunan, kemudian ketua panitia menyampaikan informasi
+						tersebut
+						kepada tim IDS. <br>
+						*Tim IDS menentukan jadwal sesi foto buku tahunan disesuaikan dengan jadwal akademis sekolah. </p>
+				</div>
+			</div>
+			<div style="display:flex;flex-direction: column;align-items: center;">
+				<div>
+					<img style="width:150px;height:150px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/Proses.png"
+					 alt="">
+				</div>
+				<div style="text-align: center;width: 320px;line-height: 23px;">
+					<p> 1. Pelaksanaan sesi foto <br>
+						2. Seleksi foto dan editing <br>
+						3. Desain dan layouting<br>
+						4. Approve biodata<br>
+						5. Pencetakan buku tahunan</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="display:flex;justify-content: center;padding-top: 64px;">
+		<div>
+			<img style="width:150px;height:150px;border-radius: 20px;" src="../../../public/assets/img/BukuTahunan/Buku jadi.png"
+			 alt="">
+		</div>
+		<div style="padding: 0px 40px;align-self: center;">
+			<h4>Buku tahunan siap untuk dibagikan!</h4>
+		</div>
+	</div>
+	<div style="display: flex;justify-content: center;">
+		<div style="background:black;height:2px;width:631px;margin-top:64px;">
+
+		</div>
+	</div>
+	<div style="text-align:center;margin:64px 0px;">
+		<h2>Temukan kami!</h2>
+	</div>
+	<div style="display: flex;justify-content: space-evenly;padding-bottom: 228px;">
+		<div style="display: flex;">
+			<div style="padding: 0px 20px 0px 0px;">
+				<img style="width:64px;height:64px;" src="../../../public/assets/img/BukuTahunan/Instagram.png" alt="">
+			</div>
+			<div>
+				<h4>idsproduction</h4>
+			</div>
+		</div>
+		<div style="display: flex;">
+			<div style="padding: 0px 20px 0px 0px;">
+				<img style="width:64px;height:64px;" src="../../../public/assets/img/BukuTahunan/Facebook.png" alt="">
+			</div>
+			<div>
+				<h4>IDS Galeri</h4>
+			</div>
+		</div>
+		<div style="display: flex;">
+			<div style="padding: 0px 20px 0px 0px;">
+				<img style="width:64px;height:64px;" src="../../../public/assets/img/BukuTahunan/Twitter.png" alt="">
+			</div>
+			<div>
+				<h4>@IDSGaleri</h4>
+			</div>
+		</div>
+	</div>
+	<!--  -->
+
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {
+				slideIndex = 1
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			setTimeout(showSlides, 5000); // Change image every 3 seconds
+		}
+
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	</script>
 </body>
+
 </html>
