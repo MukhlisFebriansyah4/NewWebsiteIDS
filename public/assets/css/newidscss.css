@@ -44,7 +44,9 @@ body{
 *{
     font-family: "Lato";
 }
-
+.active{
+	color:#3cb5b5;
+}
 a{
 	color: #4A4A4A;
 	text-decoration: none;
@@ -595,7 +597,7 @@ a:focus{
 	padding: 64px 0px 0px 0px;
 }
 
-.active, .accordion:hover {
+.accordion:hover {
   background-color: #ccc;
 }
 

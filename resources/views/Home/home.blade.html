@@ -13,19 +13,19 @@
 			<img style="height: 56px;width: 124px;" src="../../../public/assets/img/ids.png">
 		</div>
 		<div class="Item-header font-16">
-			<a href="#">Beranda</a>
+			<a class="active" href="../Home/home.blade.html">Beranda</a>
 		</div>
 		<div class="Item-header font-16">
-			<a href="#">Tentang Kami</a>
+			<a href="../Tentang kami/tentangkami.blade.html">Tentang Kami</a>
 		</div>
 		<div class="Item-header font-16">
-			<a href="#">Layanan dan Produk</a>
+			<a href="../IDSConsultant/idsconsultant.blade.html">Layanan dan Produk</a>
 		</div>
 		<div class="Item-header font-16">
 			<a href="#">Blog</a>
 		</div>
 		<div class="Item-header font-16">
-			<a href="#">Galeri</a>
+			<a href="../IDSGalery/idsgalery.blade.html">Galeri</a>
 		</div>
 		<div class="Item-header font-16">
 			<a href="#">Hubungi Kami</a>
@@ -139,7 +139,7 @@
 						</span>
 					</div>
 					<div class="card-btn color-tosca lato-bold">
-						<a class="color-tosca" href="../IDSDocumentation/idsdocumentation.blade.html">SELANJUTNYA -></a>
+						<a class="color-tosca" href="../IDSBukuTahunan/idsbukutahunan.blade.html">SELANJUTNYA -></a>
 					</div>
 				</div>
 			</div>
@@ -349,6 +349,7 @@
 			$('#slide_num').val(parseInt($('#slide_num').val()) + 1);
 			slide_change($('#slide_num').val());
 		});
+
 		function slide_change(nomor) {
 			$('ul.qoute-list').css('left', "-" + nomor + "00%");
 			if (nomor == 0) {
@@ -485,20 +486,51 @@
 			<div class="item-kontak alamatIDS">
 				<span>Gedung SMK Wikrama Bogor — Lantai 2 Jalan Raya Wangun, Kel. Sindangsari, Kec. Bogor Timur, Kota Bogor</span>
 			</div>
-			<div class="item-kontak nomerTelpIDS">
-				<span>0251 - 8249560</span>
+			<div class="item-kontak nomerTelpIDS" style="display: flex;">
+				<div style="padding: 0px 20px 0px 0px;">
+					<img style="width:22px;height:22px	;" src="../../../public/assets/img/Vector3.png" alt="" />
+				</div>
+				<div>
+					<span>0251 - 8249560</span>
+				</div>
 			</div>
-			<div class="item-kontak gmailIDS">
-				<span>produk.ids@gmail.com</span>
+			<div class="item-kontak gmailIDS" style="display: flex;">
+				<div style="padding: 0px 20px 0px 0px;">
+					<img style="width:22px;height:22px	;" src="../../../public/assets/img/Group2.png" alt="" />
+				</div>
+				<div>
+					<span>produk.ids@gmail.com</span>
+				</div>
 			</div>
 		</div>
 	</div>
 	<!--  -->
-	<div class="lastfooter bg-navy">
-		<div class="lastfooter-item">
-			<span>TEMUKAN KAMI!</span>
+	<div style="display: flex;height:82px;background:#33495D;justify-content: flex-end;align-items: center;">
+			<div style="color: #FFFFFF;font-weight: 800;">
+				TEMUKAN KAMI!
+			</div>
+			<div style="padding: 0px 0px 0px 44px;">
+				<img
+					style="width: 40px;height: 40px;"
+					src="../../../public/assets/img/Group.png"
+					alt=""
+				/>
+			</div>
+			<div style="padding: 0px 43px 0px 43px;">
+				<img
+					style="width: 20px;height: 40px;"
+					src="../../../public/assets/img/Vector.png"
+					alt=""
+				/>
+			</div>
+			<div style="padding: 0px 128px 0px 0px;">
+				<img
+					style="width: 52px;height: 40px;"
+					src="../../../public/assets/img/Group (1).png"
+					alt=""
+				/>
+			</div>			  
 		</div>
-	</div>
 </body>
 
 </html>
